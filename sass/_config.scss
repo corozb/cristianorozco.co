@@ -1,0 +1,12 @@
+$main-color: #0f0f0f;
+$second-color:  cyan;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin animation-hover {
+  transition: all .5s ease-in-out
+}
