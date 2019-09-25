@@ -1,10 +1,12 @@
 @import './config';
+@import './home';
+@import './menu';
 
 body {
   background: $main-color;
-  color: set-text-color($main-color);
+  color: text-color($main-color);
   height: 100vh;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   line-height: 1;
 }
 
@@ -13,7 +15,7 @@ h1, h2, h3 {
 }
 
 a {
-  color: set-text-color($main-color);
+  color: text-color($main-color);
   text-decoration: none;
 }
 
@@ -39,6 +41,7 @@ main {
       &:hover {
         color: $second-color;
         cursor: pointer;
+        text-shadow: $hover-shadow;
         @include animation-hover;
       }
     }

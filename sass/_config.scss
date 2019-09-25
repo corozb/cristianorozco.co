@@ -1,5 +1,11 @@
 $main-color: #0f0f0f;
-$second-color:  cyan;
+$second-color: #1BBAE1;
+$hover-shadow: (
+  0 0 10px $second-color, 
+  0 0 20px $second-color, 
+  0 0 30px $second-color, 
+  0 0 40px #fff
+);
 
 * {
   box-sizing: border-box;
@@ -9,4 +15,12 @@ $second-color:  cyan;
 
 @mixin animation-hover {
   transition: all .5s ease-in-out
+}
+
+@function text-color($color) {
+  @if (lightness($color) > 40%) {
+    @return #000;
+  } @else {
+    @return #fff
+  }
 }
