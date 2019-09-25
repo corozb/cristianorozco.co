@@ -1,0 +1,45 @@
+.about {
+  padding-top: 2rem;
+
+  &__bio-image {
+    height: 70vh;
+    width: 100%;
+    background: 
+      linear-gradient(
+        to right,
+        rgba($main-color, 0.9),
+        rgba($main-color, 0.3),
+      ),
+      url('../images/cristianorozco.jpg') center top;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    p {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__desc {
+    width: 80%;
+    text-align: center;
+
+    .subtitles {
+      padding-bottom: 1rem;
+
+    }
+  }
+
+  .social-icons {
+    display: flex;
+    flex-direction: column;
+    color: red;
+  }
+
+  footer {
+    transform: rotate(270deg) translate(3rem, 5rem);
+  }
+
+}

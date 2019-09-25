@@ -1,6 +1,8 @@
 @import './config';
 @import './home';
 @import './menu';
+@import './about';
+
 
 body {
   background: $main-color;
@@ -26,6 +28,10 @@ header {
   padding: 1rem;
 }
 
+.subtitles {
+  color: $second-color;
+}
+
 main {
   height: 100%;
   width: 100%;
@@ -41,7 +47,7 @@ main {
       &:hover {
         color: $second-color;
         cursor: pointer;
-        text-shadow: $hover-shadow;
+        @include hover-text;
         @include animation-hover;
       }
     }

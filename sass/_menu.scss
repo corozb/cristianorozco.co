@@ -42,13 +42,78 @@
       background: transparent; 
 
       &::before { // transform: rotate(45deg) translate(x or horizontal, y or vertical);
-        transform: rotate(45deg) traslate(5px, 8px)
+        transform: rotate(45deg) translate(5px, 8px);
       }
 
       &::after {
         width: 28px;
-        transform: rotate(-45deg) traslate(3px, -7px)
+        transform: rotate(-45deg) translate(3px, -7px)
+      }
     }
   }
- }
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  opacity: .98;
+  visibility: hidden;
+
+  &.open {
+    visibility: visible;
+  }
+
+
+  .menu-nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background: $main-color;
+    list-style: none;
+    padding-right: 1rem;
+    transform: translateY(-100%);
+    @include animation-hover;
+
+    &.open {
+      transform: translateY(0)
+    }
+
+    &__item {
+      transform: translateX(100vh);
+      @include animation-hover;
+
+      &.open {
+        transform: translateX(0)
+      }
+
+      &.selected > a {
+        @include hover-text
+      }
+    }
+
+    &__link {
+      display: inline-block;
+      font-size: 2rem;
+      // text-transform: uppercase;
+      padding: 2rem 0;
+      font-weight: 300;
+      @include animation-hover;
+
+      &:hover {
+        // color: $second-color;
+        @include hover-text
+      }
+    }
+  }
+}
+
+@for $i from 1 through 4 {
+  .menu-nav__item:nth-child(#{$i}) {
+    transition-delay: ($i * 0.1s) + 0.15s;
+  }
 }

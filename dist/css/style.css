@@ -79,14 +79,162 @@
 }
 
 .menu-btn__burger.open::before {
-  -webkit-transform: rotate(45deg) traslate(5px, 8px);
-          transform: rotate(45deg) traslate(5px, 8px);
+  -webkit-transform: rotate(45deg) translate(5px, 8px);
+          transform: rotate(45deg) translate(5px, 8px);
 }
 
 .menu-btn__burger.open::after {
   width: 28px;
-  -webkit-transform: rotate(-45deg) traslate(3px, -7px);
-          transform: rotate(-45deg) traslate(3px, -7px);
+  -webkit-transform: rotate(-45deg) translate(3px, -7px);
+          transform: rotate(-45deg) translate(3px, -7px);
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  opacity: .98;
+  visibility: hidden;
+}
+
+.nav.open {
+  visibility: visible;
+}
+
+.nav .menu-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background: #0f0f0f;
+  list-style: none;
+  padding-right: 1rem;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.nav .menu-nav.open {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.nav .menu-nav__item {
+  -webkit-transform: translateX(100vh);
+          transform: translateX(100vh);
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.nav .menu-nav__item.open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.nav .menu-nav__item.selected > a {
+  color: #1BBAE1;
+  text-shadow: 0 0 10px #1BBAE1, 0 0 30px #1BBAE1, 0 0 30px #fff;
+}
+
+.nav .menu-nav__link {
+  display: inline-block;
+  font-size: 2rem;
+  padding: 2rem 0;
+  font-weight: 300;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.nav .menu-nav__link:hover {
+  color: #1BBAE1;
+  text-shadow: 0 0 10px #1BBAE1, 0 0 30px #1BBAE1, 0 0 30px #fff;
+}
+
+.menu-nav__item:nth-child(1) {
+  -webkit-transition-delay: 0.25s;
+          transition-delay: 0.25s;
+}
+
+.menu-nav__item:nth-child(2) {
+  -webkit-transition-delay: 0.35s;
+          transition-delay: 0.35s;
+}
+
+.menu-nav__item:nth-child(3) {
+  -webkit-transition-delay: 0.45s;
+          transition-delay: 0.45s;
+}
+
+.menu-nav__item:nth-child(4) {
+  -webkit-transition-delay: 0.55s;
+          transition-delay: 0.55s;
+}
+
+.about {
+  padding-top: 2rem;
+}
+
+.about__bio-image {
+  height: 70vh;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(15, 15, 15, 0.9)), to(rgba(15, 15, 15, 0.3))), url("../images/cristianorozco.jpg") center top;
+  background: linear-gradient(to right, rgba(15, 15, 15, 0.9), rgba(15, 15, 15, 0.3)), url("../images/cristianorozco.jpg") center top;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.about__bio-image p {
+  margin-bottom: 2rem;
+}
+
+.about__desc {
+  width: 80%;
+  text-align: center;
+}
+
+.about__desc .subtitles {
+  padding-bottom: 1rem;
+}
+
+.about .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: red;
+}
+
+.about footer {
+  -webkit-transform: rotate(270deg) translate(3rem, 5rem);
+          transform: rotate(270deg) translate(3rem, 5rem);
 }
 
 body {
@@ -113,6 +261,10 @@ header {
   padding: 1rem;
 }
 
+.subtitles {
+  color: #1BBAE1;
+}
+
 main {
   height: 100%;
   width: 100%;
@@ -131,7 +283,8 @@ main .social-icons a {
 main .social-icons a:hover {
   color: #1BBAE1;
   cursor: pointer;
-  text-shadow: 0 0 10px #1BBAE1, 0 0 30px #fff;
+  color: #1BBAE1;
+  text-shadow: 0 0 10px #1BBAE1, 0 0 30px #1BBAE1, 0 0 30px #fff;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }
