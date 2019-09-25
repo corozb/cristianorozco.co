@@ -83,6 +83,12 @@
           transform: rotate(45deg) traslate(5px, 8px);
 }
 
+.menu-btn__burger.open::after {
+  width: 28px;
+  -webkit-transform: rotate(-45deg) traslate(3px, -7px);
+          transform: rotate(-45deg) traslate(3px, -7px);
+}
+
 body {
   background: #0f0f0f;
   color: #fff;
@@ -125,7 +131,7 @@ main .social-icons a {
 main .social-icons a:hover {
   color: #1BBAE1;
   cursor: pointer;
-  text-shadow: 0 0 10px #1BBAE1, 0 0 20px #1BBAE1, 0 0 30px #1BBAE1, 0 0 40px #fff;
+  text-shadow: 0 0 10px #1BBAE1, 0 0 30px #fff;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }

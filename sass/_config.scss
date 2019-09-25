@@ -1,10 +1,10 @@
 $main-color: #0f0f0f;
 $second-color: #1BBAE1;
 $hover-shadow: (
+  // 0 0 10px #fff, 
   0 0 10px $second-color, 
-  0 0 20px $second-color, 
-  0 0 30px $second-color, 
-  0 0 40px #fff
+  // 0 0 30px $second-color, 
+  0 0 30px #fff
 );
 
 * {
