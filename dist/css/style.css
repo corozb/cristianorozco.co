@@ -184,7 +184,7 @@
 }
 
 .about {
-  padding-top: 2rem;
+  padding-top: 3rem;
 }
 
 .about__bio-image {
@@ -233,6 +233,123 @@
 }
 
 .about footer {
+  -webkit-transform: rotate(270deg) translate(3rem, 5rem);
+          transform: rotate(270deg) translate(3rem, 5rem);
+}
+
+.projects {
+  padding-bottom: 2rem;
+}
+
+.projects-image {
+  height: 30vh;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(15, 15, 15, 0.9)), to(rgba(15, 15, 15, 0.3))), url("../images/cristianorozco.jpg") center top;
+  background: linear-gradient(to right, rgba(15, 15, 15, 0.9), rgba(15, 15, 15, 0.3)), url("../images/cristianorozco.jpg") center top;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.projects-image .subtitles {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.projects__container {
+  width: 60vw;
+  margin: 2rem auto 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 2rem;
+}
+
+.projects__item {
+  position: relative;
+  border-bottom: 5px solid #1BBAE1;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.projects__item img {
+  width: 100%;
+}
+
+.projects__item::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #0f0f0f;
+  opacity: 0;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.projects__item:hover::after {
+  top: 0;
+  opacity: .95;
+}
+
+.projects__item:hover .projects__btn {
+  opacity: 1;
+}
+
+.projects__btns {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.projects__btn {
+  opacity: 0;
+  color: #fff;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.projects__btn:hover {
+  color: #000;
+  color: #1BBAE1;
+  text-shadow: 0 0 10px #1BBAE1, 0 0 30px #1BBAE1, 0 0 30px #fff;
+}
+
+.projects .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.projects footer {
   -webkit-transform: rotate(270deg) translate(3rem, 5rem);
           transform: rotate(270deg) translate(3rem, 5rem);
 }
