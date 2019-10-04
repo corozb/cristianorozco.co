@@ -7,36 +7,56 @@
 
 .home {
   height: 100%;
-  padding-top: 50vh;
+  width: 100vw;
   overflow: hidden;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(15, 15, 15, 0.9)), to(rgba(15, 15, 15, 0.3))), url("../images/cristianorozco.jpg") center top;
-  background: linear-gradient(to right, rgba(15, 15, 15, 0.9), rgba(15, 15, 15, 0.3)), url("../images/cristianorozco.jpg") center top;
+  position: fixed;
+}
+
+.home__image {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, right top, from(#0f0f0f), to(rgba(15, 15, 15, 0.3))), url("../images/cristianorozco.jpg") no-repeat 20% 50%;
+  background: linear-gradient(to right, #0f0f0f, rgba(15, 15, 15, 0.3)), url("../images/cristianorozco.jpg") no-repeat 20% 50%;
   background-size: cover;
+  -webkit-filter: grayscale(100%) contrast(120%);
+          filter: grayscale(100%) contrast(120%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  border-radius: .6rem;
 }
 
-.home__name {
+.home .hero__text {
+  position: relative;
+  z-index: 1;
+  text-align: left;
+  top: 45vh;
+  left: 5%;
+}
+
+.home .hero__text-name {
   font-size: 5rem;
-  padding-bottom: 1rem;
+  padding-bottom: .5rem;
 }
 
-.home__name--last {
+.home .hero__text-last {
   color: #1BBAE1;
 }
 
 .menu-btn {
   position: absolute;
-  z-index: 1;
+  z-index: 100;
   right: 1rem;
   top: 1rem;
   height: 20px;
   width: 28px;
-  cursor: pointer;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
+  cursor: pointer;
 }
 
 .menu-btn__burger {
@@ -125,6 +145,8 @@
           transform: translateY(-100%);
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
+  cursor: pointer;
+  z-index: 2;
 }
 
 .nav .menu-nav.open {
@@ -184,41 +206,30 @@
 }
 
 .about {
-  padding-top: 3rem;
-}
-
-.about__bio-image {
-  height: 70vh;
   width: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(15, 15, 15, 0.9)), to(rgba(15, 15, 15, 0.3))), url("../images/cristianorozco.jpg") center top;
-  background: linear-gradient(to right, rgba(15, 15, 15, 0.9), rgba(15, 15, 15, 0.3)), url("../images/cristianorozco.jpg") center top;
-  background-size: cover;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-.about__bio-image p {
-  margin-bottom: 2rem;
+  min-height: 100vh;
+  position: relative;
+  background: #0f0f0f;
 }
 
 .about__desc {
-  width: 80%;
+  padding-top: 20vh;
+  width: 90%;
+  max-width: 1024px;
+  margin: auto;
   text-align: center;
+  font-size: 20px;
 }
 
 .about__desc .subtitles {
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
+}
+
+.about__desc .capital {
+  font-size: 50px;
+  margin-right: 10px;
+  line-height: 15px;
+  font-family: serif;
 }
 
 .about .social-icons {
@@ -242,11 +253,8 @@
 }
 
 .projects-image {
-  height: 30vh;
+  height: 20vh;
   width: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(15, 15, 15, 0.9)), to(rgba(15, 15, 15, 0.3))), url("../images/cristianorozco.jpg") center top;
-  background: linear-gradient(to right, rgba(15, 15, 15, 0.9), rgba(15, 15, 15, 0.3)), url("../images/cristianorozco.jpg") center top;
-  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -268,7 +276,7 @@
 }
 
 .projects__container {
-  width: 60vw;
+  width: 100vw;
   margin: 2rem auto 0 auto;
   display: -ms-grid;
   display: grid;
@@ -279,16 +287,13 @@
 
 .projects__item {
   position: relative;
-  border-bottom: 5px solid #1BBAE1;
-  overflow: hidden;
-  cursor: pointer;
 }
 
-.projects__item img {
-  width: 100%;
+.projects__item .project-image {
+  background: url("../images/corozb.github.io_dashboard_ responsive.png") no-repeat;
 }
 
-.projects__item::after {
+.projects__item .project-image::after {
   content: '';
   position: absolute;
   top: 100%;
@@ -301,13 +306,23 @@
   transition: all .5s ease-in-out;
 }
 
-.projects__item:hover::after {
+.projects__item .project-image:hover {
+  cursor: pointer;
+}
+
+.projects__item .project-image:hover::after {
   top: 0;
   opacity: .95;
 }
 
-.projects__item:hover .projects__btn {
+.projects__item .project-image:hover .projects__btn {
   opacity: 1;
+}
+
+.projects__item .project-image:hover + .project-text {
+  opacity: 0;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 .projects__btns {
@@ -368,9 +383,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(15, 15, 15, 0.9)), to(rgba(15, 15, 15, 0.3))), url("../images/cristianorozco.jpg") center top;
-  background: linear-gradient(to right, rgba(15, 15, 15, 0.9), rgba(15, 15, 15, 0.3)), url("../images/cristianorozco.jpg") center top;
-  background-size: cover;
 }
 
 .contact h2 {
@@ -393,6 +405,23 @@
 }
 
 @media screen and (min-width: 640px) {
+  .home__image {
+    width: 450px;
+    height: 600px;
+    margin-left: 20%;
+    margin-top: 10vh;
+  }
+  .home .hero__text {
+    margin-left: 30vw;
+    text-align: center;
+  }
+  .home .hero__text-name {
+    font-size: 5rem;
+    padding-bottom: 1rem;
+  }
+  .home .hero__text-last {
+    color: #1BBAE1;
+  }
   .menu-btn {
     visibility: hidden;
   }
@@ -404,7 +433,7 @@
     -webkit-transform: translateY(0);
             transform: translateY(0);
     height: 100%;
-    background: transparent;
+    background: #0f0f0f;
     text-align: right;
   }
   .nav .menu-nav__item {
@@ -415,14 +444,11 @@
     font-size: 1.5rem;
   }
   .about__desc {
+    padding-top: 30vh;
     font-size: 1.5rem;
   }
-  .projects-image {
-    height: 40vh;
-  }
   .projects__container {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+    width: 90vw;
   }
   .projects .subtitles {
     font-size: 3rem;
@@ -435,8 +461,9 @@
 
 @media screen and (min-width: 900px) {
   .projects__container {
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
+    width: 80vw;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
   .contact__list {
     -ms-grid-columns: (1fr)[3];
@@ -447,7 +474,69 @@
 
 @media screen and (min-width: 1024px) {
   .projects-image {
-    height: 50vh;
+    height: 30vh;
+  }
+  .projects__container {
+    width: 90vw;
+  }
+  .projects__container .projects__item {
+    margin-bottom: 5rem;
+    height: 100vh;
+  }
+  .projects__container .projects__item .project-image {
+    position: absolute;
+    height: 100vh;
+    border-bottom: 5px solid #1BBAE1;
+  }
+  .projects__container .projects__item .project-text {
+    position: relative;
+    text-align: left;
+    font-size: 2rem;
+    color: gray;
+  }
+  .projects__container .project-1 .project-image {
+    background: url("../images/corozb.github.io_dashboard_ responsive.png") no-repeat;
+    background-size: cover;
+    width: 400px;
+    left: 2rem;
+  }
+  .projects__container .project-1 .project-text {
+    top: 10vh;
+    left: 33%;
+  }
+  .projects__container .project-2 {
+    margin-bottom: -9rem;
+  }
+  .projects__container .project-2 .project-image {
+    background: url("../images/creea-digitalAgency.png") no-repeat 20% 30%;
+    background-size: cover;
+    width: 670px;
+    right: -1rem;
+    height: 60%;
+  }
+  .projects__container .project-2 .project-text {
+    top: 10vh;
+    left: 33%;
+  }
+  .projects__container .project-3 .project-image {
+    background: url("../images/corozb.github.io_moviecity_.png") no-repeat;
+    background-size: cover;
+    width: 597px;
+    left: -1rem;
+  }
+  .projects__container .project-3 .project-text {
+    top: 80vh;
+    left: 40%;
+  }
+  .projects__container .project-4 .project-image {
+    background: url("../images/corozb.github.io_budget-app_responsive.png") no-repeat;
+    background-size: cover;
+    width: 500px;
+    right: -1rem;
+  }
+  .projects__container .project-4 .project-text {
+    top: 60vh;
+    left: 40%;
   }
 }
 

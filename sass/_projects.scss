@@ -2,16 +2,8 @@
   padding-bottom: 2rem;
 
   &-image {
-    height: 30vh;
+    height: 20vh;
     width: 100%;
-    background: 
-      linear-gradient(
-      to right,
-      rgba($main-color, 0.9),
-      rgba($main-color, 0.3)
-      ),
-      url('../images/cristianorozco.jpg') center top;
-    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,24 +16,29 @@
   }
   
   &__container {
-    width: 60vw;
+    width: 100vw;
     margin: 2rem auto 0 auto;
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 2rem;
-   }
+  }
 
    &__item {
       position: relative;
-      border-bottom: 5px solid $second-color;
-      overflow: hidden;
-      cursor: pointer;
+      // border-bottom: 5px solid $second-color;
+      // overflow: hidden;
+      // cursor: pointer;
 
-      img {
-        width: 100%;
+      // img {
+      //   width: 100%;
+      // }
+
+      
+        & .project-image {
+          background: url('../images/corozb.github.io_dashboard_\ responsive.png') no-repeat;
       }
 
-      &::after {
+      & .project-image::after {
         content: '';
         position: absolute;
         top: 100%;
@@ -53,7 +50,9 @@
         @include animation-hover;
       }
 
-      &:hover {
+      & .project-image:hover {
+        cursor: pointer;
+        
         &::after {
           top: 0;
           opacity: .95;
@@ -62,8 +61,14 @@
         .projects__btn {
           opacity: 1;
         }
+        
+        & + .project-text {
+          opacity: 0;
+          @include animation-hover;
+        }
       }
-   }
+      
+  }
 
    &__btns{
      position: absolute;
