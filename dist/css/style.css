@@ -276,7 +276,7 @@
 }
 
 .projects__container {
-  width: 100vw;
+  width: 70vw;
   margin: 2rem auto 0 auto;
   display: -ms-grid;
   display: grid;
@@ -287,13 +287,35 @@
 
 .projects__item {
   position: relative;
+  overflow: hidden;
+  cursor: pointer;
 }
 
-.projects__item .project-image {
-  background: url("../images/corozb.github.io_dashboard_ responsive.png") no-repeat;
+.projects__item img {
+  width: 100%;
 }
 
-.projects__item .project-image::after {
+.projects__item .project-text {
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  height: 100%;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  opacity: 0;
+  color: gray;
+}
+
+.projects__item .project-text h1 {
+  font-size: 2rem;
+}
+
+.projects .project-image::after {
   content: '';
   position: absolute;
   top: 100%;
@@ -306,21 +328,21 @@
   transition: all .5s ease-in-out;
 }
 
-.projects__item .project-image:hover {
+.projects .project-image:hover {
   cursor: pointer;
 }
 
-.projects__item .project-image:hover::after {
+.projects .project-image:hover::after {
   top: 0;
   opacity: .95;
 }
 
-.projects__item .project-image:hover .projects__btn {
+.projects .project-image:hover .projects__btn {
   opacity: 1;
 }
 
-.projects__item .project-image:hover + .project-text {
-  opacity: 0;
+.projects .project-image:hover + .project-text {
+  opacity: 1;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }
@@ -409,7 +431,7 @@
     width: 450px;
     height: 600px;
     margin-left: 20%;
-    margin-top: 10vh;
+    margin-top: 15vh;
   }
   .home .hero__text {
     margin-left: 30vw;
@@ -433,7 +455,7 @@
     -webkit-transform: translateY(0);
             transform: translateY(0);
     height: 100%;
-    background: #0f0f0f;
+    background: transparent;
     text-align: right;
   }
   .nav .menu-nav__item {
@@ -447,8 +469,14 @@
     padding-top: 30vh;
     font-size: 1.5rem;
   }
+  .projects {
+    padding-top: 20vh;
+  }
+  .projects-image {
+    height: 20vh;
+  }
   .projects__container {
-    width: 90vw;
+    width: 80vw;
   }
   .projects .subtitles {
     font-size: 3rem;
@@ -473,70 +501,84 @@
 }
 
 @media screen and (min-width: 1024px) {
+  .projects {
+    padding-top: 10vh;
+  }
   .projects-image {
     height: 30vh;
   }
   .projects__container {
-    width: 90vw;
+    width: 80vw;
   }
-  .projects__container .projects__item {
+  .projects__item {
     margin-bottom: 5rem;
     height: 100vh;
   }
-  .projects__container .projects__item .project-image {
+  .projects__item img {
+    display: none;
+  }
+  .projects__item .project-image {
     position: absolute;
     height: 100vh;
     border-bottom: 5px solid #1BBAE1;
   }
-  .projects__container .projects__item .project-text {
+  .projects__item .project-image:hover + .project-text {
+    opacity: 0;
+  }
+  .projects .project-text {
     position: relative;
     text-align: left;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: gray;
+    opacity: 1;
+    height: 0;
   }
-  .projects__container .project-1 .project-image {
-    background: url("../images/corozb.github.io_dashboard_ responsive.png") no-repeat;
+  .projects .project-text h1 {
+    font-size: 3rem;
+  }
+  .project-1 .project-image {
+    background: url("../images/corozb.github.io_moviecity_.png") no-repeat;
     background-size: cover;
-    width: 400px;
-    left: 2rem;
+    width: 597px;
+    left: -1rem;
   }
-  .projects__container .project-1 .project-text {
-    top: 10vh;
-    left: 33%;
+  .project-1 .project-text {
+    top: 80vh;
+    left: 48%;
   }
-  .projects__container .project-2 {
+  .project-2 {
     margin-bottom: -9rem;
   }
-  .projects__container .project-2 .project-image {
+  .project-2 .project-image {
     background: url("../images/creea-digitalAgency.png") no-repeat 20% 30%;
     background-size: cover;
     width: 670px;
     right: -1rem;
     height: 60%;
   }
-  .projects__container .project-2 .project-text {
+  .project-2 .project-text {
     top: 10vh;
-    left: 33%;
+    left: 17%;
   }
-  .projects__container .project-3 .project-image {
-    background: url("../images/corozb.github.io_moviecity_.png") no-repeat;
+  .project-3 .project-image {
+    background: url("../images/corozb.github.io_dashboard_ responsive.png") no-repeat;
     background-size: cover;
-    width: 597px;
-    left: -1rem;
+    width: 400px;
+    left: 2rem;
   }
-  .projects__container .project-3 .project-text {
-    top: 80vh;
-    left: 40%;
+  .project-3 .project-text {
+    top: 10vh;
+    left: 36%;
   }
-  .projects__container .project-4 .project-image {
+  .project-4 .project-image {
     background: url("../images/corozb.github.io_budget-app_responsive.png") no-repeat;
     background-size: cover;
     width: 500px;
     right: -1rem;
   }
-  .projects__container .project-4 .project-text {
+  .project-4 .project-text {
     top: 60vh;
-    left: 40%;
+    left: 28%;
   }
 }
 

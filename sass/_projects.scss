@@ -16,7 +16,7 @@
   }
   
   &__container {
-    width: 100vw;
+    width: 70vw;
     margin: 2rem auto 0 auto;
     display: grid;
     grid-template-columns: 1fr;
@@ -26,16 +26,34 @@
    &__item {
       position: relative;
       // border-bottom: 5px solid $second-color;
-      // overflow: hidden;
-      // cursor: pointer;
+      overflow: hidden;
+      cursor: pointer;
 
-      // img {
-      //   width: 100%;
-      // }
+      img {
+        width: 100%;
+      }
 
+      .project-text {
+      position: absolute;
+      top: 0%;
+      bottom: 0%;
+      height: 100%;
+      width: 100%;
+      // z-index: 1;
+      display: grid;
+      align-items: center;
+      text-align: center;
+      opacity: 0;
+      color: gray;
+
+      h1 {
+        // flex-direction: flex-end;
+        font-size: 2rem;
+      }
+    }
       
-        & .project-image {
-          background: url('../images/corozb.github.io_dashboard_\ responsive.png') no-repeat;
+        // & .project-image {
+        //   background: url('../images/corozb.github.io_dashboard_\ responsive.png') no-repeat;
       }
 
       & .project-image::after {
@@ -63,12 +81,12 @@
         }
         
         & + .project-text {
-          opacity: 0;
+          opacity: 1;
           @include animation-hover;
         }
       }
       
-  }
+  
 
    &__btns{
      position: absolute;
