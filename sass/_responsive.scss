@@ -52,6 +52,7 @@
   }
 
   .about__desc {
+    width: 80%;
     padding-top: 30vh;
     font-size: 1.5rem;
   }
@@ -86,6 +87,12 @@
       width: 80vw;
       grid-template-columns:  1fr;
     }
+  }
+
+  .about__desc {
+    width: 90%;
+    padding-top: 30vh;
+    font-size: 1.5rem;
   }
   
   
