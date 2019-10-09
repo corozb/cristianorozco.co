@@ -7,6 +7,7 @@
 
   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+  <link rel="stylesheet" href="../css/animate.css">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
   <title> My Projects || Cristian Orozco </title>
@@ -18,7 +19,7 @@
     </div>
 
     <nav class="nav">
-      <ul class="menu-nav">
+      <ul class="menu-nav wow fadeIn">
         <li class="menu-nav__item ">
           <a href="../../index.html" class="menu-nav__link">Home</a>
         </li>
@@ -42,11 +43,11 @@
   <main>
     <section class="projects">
       <div class="projects-image">
-        <h1 class="subtitles">My Projects</h1>
+        <h1 class="subtitles wow fadeIn">My Projects</h1>
       </div>
       
       <div class="projects__container">
-        <div class="projects__item project-1">
+        <div class="projects__item project-1 wow fadeInUp" data-wow-duration="1s">
             <div class="project-image">
               <img src="../images/corozb.github.io_moviecity_.png" alt="MovieCity">
               <div class="projects__btns">
@@ -66,7 +67,7 @@
             </div>
         </div>
 
-        <div class="projects__item project-2">
+        <div class="projects__item project-2 wow fadeInUp" data-wow-duration="1s">
           <div class="project-image">
             <img src="../images/corozb.github.io_creea_ .png" alt="Digital Agency - Creea">
             <div class="projects__btns">
@@ -86,7 +87,7 @@
           </div>
         </div>
 
-        <div class="projects__item project-3">
+        <div class="projects__item project-3 wow fadeInUp" data-wow-duration="1s">
           <div class="project-image">
             <img src="../images/corozb.github.io_dashboard.png" alt="Bishop-dashboard">
             <div class="projects__btns">
@@ -107,7 +108,7 @@
           </div>
         </div>
 
-        <div class="projects__item project-4">
+        <div class="projects__item project-4 wow fadeInUp" data-wow-duration="1s">
           <div class="project-image">
             <img src="../images/corozb.github.io_budget-app_ .png" alt="my-finances">
             <div class="projects__btns">
@@ -151,5 +152,9 @@
   </main>
 
   <script src="../js/script.js"></script>
+  <script src="../js/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
 </body>
 </html>

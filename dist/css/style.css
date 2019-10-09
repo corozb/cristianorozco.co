@@ -394,7 +394,7 @@
 
 .contact {
   height: 100%;
-  padding-top: 40vh;
+  padding-top: 20vh;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -411,6 +411,7 @@
 .contact h2 {
   font-size: 3rem;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .contact__list {
@@ -488,6 +489,9 @@
   }
   .projects .subtitles {
     font-size: 3rem;
+  }
+  .contact {
+    padding-top: 40vh;
   }
   .contact__list {
     -ms-grid-columns: (1fr)[2];

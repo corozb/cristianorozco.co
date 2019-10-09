@@ -74,8 +74,12 @@
 
   }
 
-  .contact__list {
-    grid-template-columns: repeat(2, 1fr)
+  .contact {
+    padding-top: 40vh;
+
+    &__list {
+      grid-template-columns: repeat(2, 1fr)
+    }
   }
 
 }

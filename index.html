@@ -7,6 +7,7 @@
 
   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+  <link rel="stylesheet" href="./dist/css/animate.css">
   <link rel="stylesheet" href="./dist/css/style.css">
   <link rel="shortcut icon" href="./dist/images/favicon.ico" type="image/x-icon">
   <title>Cristian Orozco || Portfolio </title>
@@ -18,7 +19,7 @@
     </div>
 
     <nav class="nav">
-      <ul class="menu-nav">
+      <ul class="menu-nav wow fadeIn">
         <li class="menu-nav__item selected">
           <a href="index.html" class="menu-nav__link">Home</a>
         </li>
@@ -42,9 +43,9 @@
   <main>
     <div class="home">
       <div class="home__hero">
-        <div class="home__image"></div>
+        <div class="home__image wow fadeIn" data-wow-delay="1s"></div>
         
-        <div class="hero__text">
+        <div class="hero__text wow fadeIn" data-wow-delay="1.8s">
           <h2>Hi! I'm</h2>
           <h1 class="hero__text-name">
             Cristian <span class="hero__text-last">Orozco</span>
@@ -75,5 +76,9 @@
   </main>
 
   <script src="dist/js/script.js"></script>
+  <script src="dist/js/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
 </body>
 </html>
