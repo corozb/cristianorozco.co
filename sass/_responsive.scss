@@ -1,15 +1,8 @@
 @include mobile {
 
   .home {
-    &__image {
-      width: 450px;
-      height: 600px;
-      margin-left: 20%;
-      margin-top: 15vh;
-      
-    }
-
     .hero__text {
+      margin-top: 1vh;
       margin-left: 30vw;
       text-align: center;
 
@@ -85,6 +78,12 @@
 }
 
 @include tablet {
+  .home {
+    .hero__text {
+      margin-top: 10vh;
+    }
+  }
+
   .projects {
     
     &__container {

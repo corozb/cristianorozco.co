@@ -31,7 +31,10 @@
   .social-icons {
     display: flex;
     flex-direction: column;
-    color: red;
+    
+    position: fixed;
+    bottom: 1rem;
+    left: .5rem;
   }
 
   footer {

@@ -6,36 +6,36 @@
 }
 
 .home {
-  height: 100%;
+  height: 100vh;
   width: 100vw;
   overflow: hidden;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  position: fixed;
-}
-
-.home__image {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  background: -webkit-gradient(linear, left top, right top, from(#0f0f0f), to(rgba(15, 15, 15, 0.3))), url("../images/cristianorozco.jpg") no-repeat 20% 50%;
-  background: linear-gradient(to right, #0f0f0f, rgba(15, 15, 15, 0.3)), url("../images/cristianorozco.jpg") no-repeat 20% 50%;
+  background: -webkit-gradient(linear, left top, right top, from(#0f0f0f), to(rgba(15, 15, 15, 0.3))), url("../images/cristianorozco.jpg") no-repeat;
+  background: linear-gradient(to right, #0f0f0f, rgba(15, 15, 15, 0.3)), url("../images/cristianorozco.jpg") no-repeat;
   background-size: cover;
   -webkit-filter: grayscale(100%) contrast(120%);
           filter: grayscale(100%) contrast(120%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 82%, 28% 100%, 0 84%);
+          clip-path: polygon(0 0, 100% 0, 100% 82%, 28% 100%, 0 84%);
+}
+
+.home__image {
+  width: 100%;
+  height: 100vh;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   border-radius: .6rem;
 }
 
 .home .hero__text {
-  position: relative;
+  position: absolute;
   z-index: 1;
   text-align: left;
   top: 45vh;
-  left: 5%;
+  left: 10%;
 }
 
 .home .hero__text-name {
@@ -241,7 +241,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  color: red;
+  position: fixed;
+  bottom: 1rem;
+  left: .5rem;
 }
 
 .about footer {
@@ -435,13 +437,8 @@
 }
 
 @media screen and (min-width: 640px) {
-  .home__image {
-    width: 450px;
-    height: 600px;
-    margin-left: 20%;
-    margin-top: 15vh;
-  }
   .home .hero__text {
+    margin-top: 1vh;
     margin-left: 30vw;
     text-align: center;
   }
@@ -500,6 +497,9 @@
 }
 
 @media screen and (min-width: 900px) {
+  .home .hero__text {
+    margin-top: 10vh;
+  }
   .projects__container {
     width: 80vw;
     -ms-grid-columns: 1fr;
