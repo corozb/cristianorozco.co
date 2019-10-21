@@ -7,34 +7,34 @@
 
 .home {
   height: 100vh;
-  overflow: hidden;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  background: -webkit-gradient(linear, left top, right top, from(#0f0f0f), to(rgba(15, 15, 15, 0.3))), url("../images/cristianorozco.jpg") no-repeat;
-  background: linear-gradient(to right, #0f0f0f, rgba(15, 15, 15, 0.3)), url("../images/cristianorozco.jpg") no-repeat;
+  position: relative;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(16, 17, 25, 0.89)), to(rgba(13, 4, 144, 0.664))), url(../images/cristianorozco.jpg) no-repeat;
+  background: linear-gradient(to right, rgba(16, 17, 25, 0.89), rgba(13, 4, 144, 0.664)), url(../images/cristianorozco.jpg) no-repeat;
   background-size: cover;
   -webkit-filter: grayscale(100%) contrast(120%);
           filter: grayscale(100%) contrast(120%);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 82%, 28% 100%, 0 84%);
           clip-path: polygon(0 0, 100% 0, 100% 82%, 28% 100%, 0 84%);
-}
-
-.home__image {
-  width: 100%;
-  height: 100vh;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-  border-radius: .6rem;
+  background-attachment: fixed;
 }
 
 .home .hero__text {
-  position: absolute;
-  z-index: 1;
-  text-align: left;
-  top: 45vh;
-  left: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 800px;
+  width: 80%;
+  -webkit-box-align: right;
+      -ms-flex-align: right;
+          align-items: right;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: right;
 }
 
 .home .hero__text-name {
@@ -44,6 +44,12 @@
 
 .home .hero__text-last {
   color: #1BBAE1;
+}
+
+.home .wave {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .menu-btn {
@@ -436,18 +442,6 @@
 }
 
 @media screen and (min-width: 640px) {
-  .home .hero__text {
-    margin-top: 1vh;
-    margin-left: 30vw;
-    text-align: center;
-  }
-  .home .hero__text-name {
-    font-size: 5rem;
-    padding-bottom: 1rem;
-  }
-  .home .hero__text-last {
-    color: #1BBAE1;
-  }
   .menu-btn {
     visibility: hidden;
   }
@@ -496,9 +490,6 @@
 }
 
 @media screen and (min-width: 900px) {
-  .home .hero__text {
-    margin-top: 10vh;
-  }
   .projects__container {
     width: 80vw;
     -ms-grid-columns: 1fr;

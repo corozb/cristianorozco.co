@@ -1,22 +1,22 @@
 @include mobile {
 
-  .home {
-    .hero__text {
-      margin-top: 1vh;
-      margin-left: 30vw;
-      text-align: center;
+  // .home {
+  //   .hero__text {
+  //     margin-top: 1vh;
+  //     margin-left: 30vw;
+  //     text-align: center;
 
-      &-name {
-        font-size: 5rem;
-        padding-bottom: 1rem;
-      }
+  //     &-name {
+  //       font-size: 5rem;
+  //       padding-bottom: 1rem;
+  //     }
   
-      &-last {
-          color: $second-color;
-        }
-      }
+  //     &-last {
+  //         color: $second-color;
+  //       }
+  //     }
 
-  }
+  // }
 
   .menu-btn {
     visibility: hidden;
@@ -78,11 +78,11 @@
 }
 
 @include tablet {
-  .home {
-    .hero__text {
-      margin-top: 10vh;
-    }
-  }
+  // .home {
+  //   .hero__text {
+  //     margin-top: 10vh;
+  //   }
+  // }
 
   .projects {
     

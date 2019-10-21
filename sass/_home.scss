@@ -1,47 +1,35 @@
 .home {
+  // width: 100%;
   height: 100vh;
-  // width: 100vw;
-  overflow: hidden;
-  align-items: center;
-  text-align: center;
+  // overflow: hidden;
+  // align-items: center;
+  // text-align: center;
+  position: relative;
   // position: fixed;
   background: 
   linear-gradient(
-      to right,
-      rgba($main-color, 1),
-      rgba($main-color, .3)
-      ), 
-      url('../images/cristianorozco.jpg') no-repeat;
+    to right,
+   hsla(233, 21%, 8%, 0.89), 
+   hsla(244, 95%, 29%, 0.664)), 
+  url(../images/cristianorozco.jpg) no-repeat;
   background-size: cover;
   filter: grayscale(100%) contrast(120%);
   clip-path: polygon(0 0, 100% 0, 100% 82%, 28% 100%, 0 84%);
-    
-  
-  
-  &__image {
-    // position: absolute;
-    width: 100%;
-    height: 100vh;
-    // background:
-    // linear-gradient(
-    //   to right,
-    //   rgba($main-color, 1),
-    //   rgba($main-color, .3)
-    //   ), 
-    //   url('../images/cristianorozco.jpg') no-repeat 20% 50%;
-    // background-size: cover;
-    // filter: grayscale(100%) contrast(120%);
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-    border-radius: .6rem;
-  
-  }
+  background-attachment: fixed;  
 
   .hero__text {
-    position: absolute;
-    z-index: 1;
-    text-align: left;
-    top: 45vh;
-    left: 10%;
+    // position: absolute;
+    // z-index: 1;
+    // text-align: left;
+    // top: 45vh;
+    // left: 10%;
+    display: flex;
+    height: 800px;
+    width: 80%;
+    align-items: right;
+    justify-content: center;
+    flex-direction: column;
+    text-align: right;
 
     &-name {
       font-size: 5rem;
@@ -54,5 +42,10 @@
 
   }
 
+  .wave {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
   
 }
