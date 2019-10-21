@@ -1,23 +1,5 @@
 @include mobile {
 
-  // .home {
-  //   .hero__text {
-  //     margin-top: 1vh;
-  //     margin-left: 30vw;
-  //     text-align: center;
-
-  //     &-name {
-  //       font-size: 5rem;
-  //       padding-bottom: 1rem;
-  //     }
-  
-  //     &-last {
-  //         color: $second-color;
-  //       }
-  //     }
-
-  // }
-
   .menu-btn {
     visibility: hidden;
   }
@@ -78,12 +60,6 @@
 }
 
 @include tablet {
-  // .home {
-  //   .hero__text {
-  //     margin-top: 10vh;
-  //   }
-  // }
-
   .projects {
     
     &__container {
@@ -187,9 +163,6 @@
           }
 
           & .project-text {
-          // position: relative;
-          // z-index: 1;
-          // text-align: left;
           top: 10vh;
           left: 17%;
           }
@@ -221,9 +194,6 @@
         }
 
         & .project-text {
-        // position: relative;
-        // z-index: 1;
-        // text-align: left;
         top: 60vh;
         left: 28%;
         }
