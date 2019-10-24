@@ -1,5 +1,5 @@
 .home {
-  height: 100vh;
+  height: 600px;
   position: relative;
   // position: fixed;
   background: 
@@ -33,10 +33,30 @@
 
   }
 
-  .wave {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+}
+
+.scroll-down {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  left: 50%;
+  bottom: 50px;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: translate(-50%, 0) rotate(45deg);
+  animation: move_down 3s cubic-bezier(0.19, 1, 0.22, 1) infinite;
+}
+
+@keyframes move_down {
+  0% {
+    transform: translate(0,-70px) rotate(45deg);
+    opacity: 0;
   }
-  
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 40px) rotate(45deg);
+    opacity: 0;
+  }
 }

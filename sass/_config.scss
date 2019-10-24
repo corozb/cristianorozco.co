@@ -22,10 +22,7 @@ $second-color: #1BBAE1;
 @mixin hover-text {
   color: $second-color;
   text-shadow:  
-  // 0 0 10px #fff, 
-  0 0 10px $second-color, 
   0 0 30px $second-color, 
-  0 0 30px #fff
 };
 
 @mixin mobile {

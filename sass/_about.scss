@@ -1,6 +1,6 @@
 .about {
     width: 100%;
-    min-height: 100vh;
+    min-height: 700px;
     position: relative;
     background: $main-color;
 
@@ -35,6 +35,10 @@
     position: fixed;
     bottom: 1rem;
     left: .5rem;
+    
+    i {
+      padding: 4px
+    }
   }
 
   footer {

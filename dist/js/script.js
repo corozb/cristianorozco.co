@@ -43,11 +43,13 @@ function scrollMenu() {
     if (hPos < screemHeight || screemHeight == ' ') {
       $menuHome.classList.add('selected')
       $menuProject.classList.remove('selected')
+      $menuContact.classList.remove('selected')
     }
     if (prPos < screemHeight) {
-      $menuHome.classList.remove('selected')
       $menuProject.classList.add('selected')
+      $menuHome.classList.remove('selected')
       $menuAbout.classList.remove('selected')
+      $menuContact.classList.remove('selected')
     }
     if (aPos < screemHeight) {
       $menuAbout.classList.add('selected')
@@ -55,8 +57,8 @@ function scrollMenu() {
       $menuContact.classList.remove('selected')
     }
     if (cPos < screemHeight) {
-      $menuAbout.classList.remove('selected')
       $menuContact.classList.add('selected')
+      $menuAbout.classList.remove('selected')
       $social.style.display = "none"
       $name.style.display = "none"
     }
