@@ -617,6 +617,9 @@
     padding-top: 20vh;
     height: 38rem;
   }
+  .contact__list {
+    width: 100vw;
+  }
   .contact hr {
     margin-top: 30vh;
   }

@@ -127,6 +127,11 @@
   .contact {
     padding-top: 20vh;
     height: 38rem;
+
+
+    &__list {
+      width: 100vw
+    }
     
     hr {
       margin-top: 30vh;
