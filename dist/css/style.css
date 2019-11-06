@@ -8,8 +8,8 @@
 .home {
   height: 600px;
   position: relative;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(16, 17, 25, 0.89)), to(rgba(13, 4, 144, 0.664))), url(../images/cristianorozco.jpg) no-repeat 50% 50%;
-  background: linear-gradient(to right, rgba(16, 17, 25, 0.89), rgba(13, 4, 144, 0.664)), url(../images/cristianorozco.jpg) no-repeat 50% 50%;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(16, 17, 25, 0.89)), to(rgba(13, 4, 144, 0.664))), url(../images/cristianorozco.jpg) no-repeat 50% 0%;
+  background: linear-gradient(to right, rgba(16, 17, 25, 0.89), rgba(13, 4, 144, 0.664)), url(../images/cristianorozco.jpg) no-repeat 50% 0%;
   background-size: cover;
   -webkit-filter: grayscale(100%) contrast(120%);
           filter: grayscale(100%) contrast(120%);
@@ -499,6 +499,9 @@
 @media screen and (min-width: 200px) {
   body {
     min-width: 26rem;
+  }
+  .menu-nav {
+    min-width: 30rem;
   }
   .about__desc {
     padding: 4rem;
