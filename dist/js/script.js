@@ -38,7 +38,9 @@ function scrollMenu() {
   const cPos = $contact.getBoundingClientRect().top
 
 
-  const screemHeight = window.innerHeight/5 
+  const screemHeight = window.innerHeight/5
+  console.log('screem: ', screemHeight)
+  console.log('about', aPos)
 
     if (hPos < screemHeight || screemHeight == ' ') {
       $menuHome.classList.add('selected')

@@ -1,3 +1,13 @@
+@include phone {
+  body {
+    min-width: 26rem
+  }
+
+  .about__desc {
+    padding: 4rem;
+  }
+}
+
 @include mobile {
 
   .menu-btn {

@@ -24,6 +24,12 @@ $second-color: #1BBAE1;
   text-shadow: 0 0 10px $second-color, 
 };
 
+@mixin phone {
+  @media screen and (min-width: 280px) {
+    @content;
+  }
+}
+
 @mixin mobile {
   @media screen and (min-width: 640px) {
     @content;
