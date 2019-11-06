@@ -25,7 +25,7 @@ $second-color: #1BBAE1;
 };
 
 @mixin phone {
-  @media screen and (min-width: 280px) {
+  @media screen and (min-width: 200px) {
     @content;
   }
 }
