@@ -16,7 +16,7 @@
   }
   
   &__container {
-    width: 70vw;
+    width: 80vw;
     margin: 2rem auto 0 auto;
     display: grid;
     grid-template-columns: 1fr;
@@ -25,92 +25,109 @@
 
    &__item {
       position: relative;
-      // border-bottom: 5px solid $second-color;
       overflow: hidden;
-      cursor: pointer;
 
       img {
         width: 100%;
       }
 
       .project-text {
+      margin-top: 1rem;
       position: absolute;
       top: 0%;
       bottom: 0%;
-      height: 100%;
       width: 100%;
-      // z-index: 1;
-      display: grid;
-      align-items: center;
       text-align: center;
       opacity: 0;
       color: gray;
 
-      h1 {
-        // flex-direction: flex-end;
-        font-size: 2rem;
+        h1 {
+          font-size: 1.7rem;
+          padding-bottom: 1rem;
+        }
+
+        h2 {
+          font-size: 1.3rem;
+        }
+      }
+      
+    }
+
+    & .project-image::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: $main-color;
+      opacity: 0;
+      @include animation-hover;
+    }
+
+    & .project-image:hover {
+      
+      &::after {
+        top: 0;
+        opacity: .95;
+      }
+
+      .projects__btns {
+        opacity: 1;
+      }
+      
+      & + .project-text {
+        opacity: 1;
+        @include animation-hover;
       }
     }
       
-        // & .project-image {
-        //   background: url('../images/corozb.github.io_dashboard_\ responsive.png') no-repeat;
-      }
-
-      & .project-image::after {
-        content: '';
-        position: absolute;
-        top: 100%;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background: $main-color;
-        opacity: 0;
-        @include animation-hover;
-      }
-
-      & .project-image:hover {
-        cursor: pointer;
-        
-        &::after {
-          top: 0;
-          opacity: .95;
-        }
-
-        .projects__btn {
-          opacity: 1;
-        }
-        
-        & + .project-text {
-          opacity: 1;
-          @include animation-hover;
-        }
-      }
-      
   
 
-   &__btns{
-     position: absolute;
-     top: 0;
-     height: 100%;
-     width: 100%;
-     z-index: 1;
-     display: grid;
-     grid-template-columns: repeat(2, 1fr);
-     align-items: center;
-     text-align: center;
-   }
+  &__btns{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 
-   &__btn {
-     opacity: 0;
-     color: text-color($main-color);
-     @include animation-hover;
+    a {
+      display: inherit;
+      background: rgb(36, 35, 35);
+      border-radius: 1rem;
+      padding: .2rem;
 
-     &:hover {
-       color: text-color($second-color);
-       @include hover-text;
-      //  color: text-color(text-color($second-color))
-     }
-   }
+      &:hover {
+        background-color: $second-color;
+        color: #fff;
+      }
+    }
+    
+    
+    &:hover a {
+      margin: 0 .5rem;
+      margin-bottom: 2rem;
+      opacity: 1;
+    }
+  }
+
+  &__btn {
+    opacity: 0;
+    color: text-color($main-color);
+    @include animation-hover;
+
+    i {
+      padding-right: .2rem;
+    }
+
+    &:hover {
+      color: text-color($second-color);
+      @include hover-text;
+    }
+  }
 
     .social-icons {
     display: flex;
@@ -123,3 +140,4 @@
 
 
 }
+

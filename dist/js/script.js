@@ -72,3 +72,14 @@ function scrollMenu() {
 
 
 window.addEventListener('scroll', scrollMenu)
+
+
+// Scrolling Effect
+window.addEventListener('scroll', ()=> {
+  if (window.pageYOffset) {
+    $nav.classList.add('dark')
+  }
+  else {
+    $nav.classList.remove('dark')
+  }
+})
