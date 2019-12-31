@@ -1,10 +1,36 @@
 $main-color: #0f0f0f;
 $second-color: #1BBAE1;
+$main-font: 'Montserrat', sans-serif;
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: $main-color;
+  color: text-color($main-color);
+  height: 100vh;
+  font-family: $main-font;
+  line-height: 1;
+}
+
+h1, h2, h3 {
+  font-weight: 400;
+}
+
+a {
+  color: text-color($main-color);
+  text-decoration: none;
 }
 
 @mixin animation-hover {

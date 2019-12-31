@@ -1,0 +1,64 @@
+.contact-form {
+  width: 80vw;
+  margin: 5% 1.4%;
+
+  ul {
+    border-radius: .5rem;
+    margin-bottom: 2.5rem;
+
+    li {
+      padding: .8rem;
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+    }
+  }
+
+  label {
+    display: block;
+    font-size: .8rem;
+    padding-left: .3rem;
+    color: #999;
+    font-size: 1rem;
+
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: .4rem;
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-family: $main-font;
+    font-size: 1rem;
+
+    &:focus {
+      outline: none;
+      border: none;
+    }
+  }
+
+  .textarea {
+    border-bottom: 1px solid #999;
+  }
+
+  .send {
+    padding: 1.2rem 2rem;
+    margin-left: .8rem;
+    background: rgb(36, 35, 35);
+    border-radius: 1rem;
+    border: none;
+    font-family: $main-font;
+    font-size: 1rem;
+    color: #fff;
+
+    &:hover {
+      background-color: $second-color;
+      color: #fff;
+      cursor: pointer;
+    }
+
+  }
+}
