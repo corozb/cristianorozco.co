@@ -12,13 +12,9 @@ li {
   list-style: none;
 }
 
-a {
-  text-decoration: none;
-}
-
 body {
   background: $main-color;
-  color: text-color($main-color);
+  color: #fff;
   height: 100vh;
   font-family: $main-font;
   line-height: 1;
@@ -29,8 +25,17 @@ h1, h2, h3 {
 }
 
 a {
-  color: text-color($main-color);
+  color: #fff;
   text-decoration: none;
+}
+
+::-webkit-scrollbar{
+  width: .5rem;
+
+  &-thumb {
+    background: linear-gradient(transparent, $second-color);
+    border-radius: .4rem;
+  }
 }
 
 @mixin animation-hover {
@@ -73,4 +78,6 @@ a {
     @content;
   }
 }
+
+
 

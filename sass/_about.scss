@@ -37,7 +37,11 @@
     left: .5rem;
     
     i {
-      padding: 4px
+      padding: 4px;
+
+      &:hover {
+        @include hover-text
+      }
     }
   }
 
