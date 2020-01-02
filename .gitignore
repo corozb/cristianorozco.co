@@ -1,2 +1,5 @@
 dist/css/style.css.map
 
+
+# Local Netlify folder
+.netlify
