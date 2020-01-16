@@ -1,11 +1,12 @@
 $main-color: #0f0f0f;
-$second-color: #1BBAE1;
+$second-color: #1bbae1;
 $main-font: 'Montserrat', sans-serif;
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 li {
@@ -20,7 +21,9 @@ body {
   line-height: 1;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-weight: 400;
 }
 
@@ -29,31 +32,31 @@ a {
   text-decoration: none;
 }
 
-::-webkit-scrollbar{
-  width: .5rem;
+::-webkit-scrollbar {
+  width: 0.5rem;
 
   &-thumb {
     background: linear-gradient(transparent, $second-color);
-    border-radius: .4rem;
+    border-radius: 0.4rem;
   }
 }
 
 @mixin animation-hover {
-  transition: all .5s ease-in-out
+  transition: all 0.5s ease-in-out;
 }
 
 @function text-color($color) {
   @if (lightness($color) > 40%) {
     @return #000;
   } @else {
-    @return #fff
+    @return #fff;
   }
-};
+}
 
 @mixin hover-text {
   color: $second-color;
-  text-shadow: 0 0 10px $second-color, 
-};
+  text-shadow: 0 0 10px $second-color;
+}
 
 @mixin phone {
   @media screen and (min-width: 200px) {
@@ -78,6 +81,3 @@ a {
     @content;
   }
 }
-
-
-

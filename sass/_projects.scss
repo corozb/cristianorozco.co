@@ -14,7 +14,7 @@
       margin-bottom: 2rem;
     }
   }
-  
+
   &__container {
     width: 80vw;
     margin: 2rem auto 0 auto;
@@ -23,15 +23,15 @@
     grid-gap: 2rem;
   }
 
-   &__item {
-      position: relative;
-      overflow: hidden;
+  &__item {
+    position: relative;
+    overflow: hidden;
 
-      img {
-        width: 100%;
-      }
+    img {
+      width: 100%;
+    }
 
-      .project-text {
+    .project-text {
       margin-top: 1rem;
       position: absolute;
       top: 0%;
@@ -41,50 +41,46 @@
       opacity: 0;
       color: gray;
 
-        h1 {
-          font-size: 1.7rem;
-          padding-bottom: 1rem;
-        }
-
-        h2 {
-          font-size: 1.3rem;
-        }
+      h1 {
+        font-size: 1.7rem;
+        padding-bottom: 1rem;
       }
-      
+
+      h2 {
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  & .project-image::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: $main-color;
+    opacity: 0;
+    @include animation-hover;
+  }
+
+  & .project-image:hover {
+    &::after {
+      top: 0;
+      opacity: 0.95;
     }
 
-    & .project-image::after {
-      content: '';
-      position: absolute;
-      top: 100%;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background: $main-color;
-      opacity: 0;
+    .projects__btns {
+      opacity: 1;
+    }
+
+    & + .project-text {
+      opacity: 1;
       @include animation-hover;
     }
+  }
 
-    & .project-image:hover {
-      
-      &::after {
-        top: 0;
-        opacity: .95;
-      }
-
-      .projects__btns {
-        opacity: 1;
-      }
-      
-      & + .project-text {
-        opacity: 1;
-        @include animation-hover;
-      }
-    }
-      
-  
-
-  &__btns{
+  &__btns {
     position: absolute;
     top: 0;
     height: 100%;
@@ -98,19 +94,19 @@
       display: inherit;
       background: rgb(36, 35, 35);
       border-radius: 1rem;
-      padding: .2rem;
+      padding: 0.2rem;
 
       &:hover {
         background-color: $second-color;
         color: #fff;
       }
     }
-    
-    
+
     &:hover a {
-      margin: 0 .5rem;
+      margin: 0 0.5rem;
       margin-bottom: 2rem;
       opacity: 1;
+      padding: 0.5rem 1rem;
     }
   }
 
@@ -120,7 +116,7 @@
     @include animation-hover;
 
     i {
-      padding-right: .2rem;
+      padding-right: 0.5rem;
     }
 
     &:hover {
@@ -129,7 +125,7 @@
     }
   }
 
-    .social-icons {
+  .social-icons {
     display: flex;
     flex-direction: column;
   }
@@ -137,7 +133,4 @@
   footer {
     transform: rotate(270deg) translate(3rem, 5rem);
   }
-
-
 }
-
