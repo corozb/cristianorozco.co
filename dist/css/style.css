@@ -334,10 +334,9 @@ main .social-icons a:hover {
 
 .about__desc {
   padding-top: 20vh;
-  width: 70vh;
   max-width: 1024px;
   margin: auto;
-  font-size: 1.8em;
+  font-size: 1.2em;
   text-align: justify;
   line-height: 40px;
 }
@@ -347,7 +346,7 @@ main .social-icons a:hover {
 }
 
 .about__desc .capital {
-  font-size: 50px;
+  font-size: 2.1rem;
   margin-right: 10px;
   line-height: 15px;
   color: #1bbae1;
@@ -363,7 +362,7 @@ main .social-icons a:hover {
           flex-direction: column;
   position: fixed;
   bottom: 1rem;
-  left: .5rem;
+  left: 0.5rem;
 }
 
 .about .social-icons i {
