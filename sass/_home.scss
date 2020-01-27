@@ -1,16 +1,16 @@
 .home {
   height: 600px;
   position: relative;
-  background: 
-  linear-gradient(
-    to right,
-   hsla(233, 21%, 8%, 0.89), 
-   hsla(244, 95%, 29%, 0.664)), 
-  url(../images/cristianorozco.jpg) no-repeat 50% 0%;
+  background: linear-gradient(
+      to right,
+      hsla(233, 21%, 8%, 0.89),
+      hsla(244, 95%, 29%, 0.664)
+    ),
+    url(../images/cristianorozco.jpg) no-repeat 50% 0%;
   background-size: cover;
   filter: grayscale(100%) contrast(120%);
   clip-path: polygon(0 0, 100% 0, 100% 82%, 28% 100%, 0 84%);
-  background-attachment: fixed;  
+  background-attachment: fixed;
 
   .hero__text {
     display: flex;
@@ -22,16 +22,14 @@
     text-align: right;
 
     &-name {
-      font-size: 5rem;
-      padding-bottom: .5rem;
+      font-size: 3rem;
+      padding-bottom: 0.5rem;
     }
 
     &-last {
-        color: $second-color;
-      }
-
+      color: $second-color;
+    }
   }
-
 }
 
 .scroll-down {
@@ -48,7 +46,7 @@
 
 @keyframes move_down {
   0% {
-    transform: translate(0,-70px) rotate(45deg);
+    transform: translate(0, -70px) rotate(45deg);
     opacity: 0;
   }
   50% {
