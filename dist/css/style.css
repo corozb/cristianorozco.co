@@ -543,7 +543,7 @@ main .social-icons a:hover {
 
 .contact {
   height: auto;
-  padding-top: 20vh;
+  padding-top: 10vh;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -558,9 +558,10 @@ main .social-icons a:hover {
 }
 
 .contact h2 {
-  font-size: 3rem;
+  font-size: 2.2rem;
   margin-bottom: 2rem;
   text-align: center;
+  color: #1bbae1;
 }
 
 .contact__list {
@@ -579,9 +580,9 @@ main .social-icons a:hover {
 }
 
 .contact p {
-  font-size: 2em;
+  font-size: 1.8rem;
   text-align: center;
-  padding-top: 9rem;
+  padding-top: 7rem;
   padding-bottom: 2rem;
 }
 
