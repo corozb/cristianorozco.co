@@ -14,7 +14,7 @@ body {
   background: #0f0f0f;
   color: #fff;
   height: 100vh;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", system-ui;
   line-height: 1;
 }
 
@@ -648,7 +648,7 @@ footer {
   border: none;
   background: transparent;
   color: #fff;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", system-ui;
   font-size: 1rem;
 }
 
@@ -668,7 +668,7 @@ footer {
   background: #242323;
   border-radius: 1rem;
   border: none;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", system-ui;
   font-size: 1rem;
   color: #fff;
   outline: none;
