@@ -1,9 +1,9 @@
 @include phone {
   body {
-    min-width: 26rem
+    min-width: 26rem;
   }
 
-  .menu-nav{
+  .menu-nav {
     min-width: 30rem;
   }
 
@@ -13,7 +13,6 @@
 }
 
 @include mobile {
-
   .menu-btn {
     visibility: hidden;
   }
@@ -36,7 +35,6 @@
       &__link {
         font-size: 1.5rem;
       }
-    
     }
   }
 
@@ -56,9 +54,8 @@
       font-size: 3rem;
     }
 
-    
     &__btns {
-      &:hover a{
+      &:hover a {
         margin-bottom: 7rem;
       }
     }
@@ -75,9 +72,6 @@
         font-size: 1.6rem;
       }
     }
-  
-      
-    
   }
 
   .contact {
@@ -93,15 +87,13 @@
       padding-top: 5rem;
     }
   }
-
 }
 
 @include tablet {
   .projects {
-    
     &__container {
       width: 80vw;
-      grid-template-columns:  1fr;
+      grid-template-columns: 1fr;
     }
   }
 
@@ -110,8 +102,7 @@
     padding-top: 30vh;
     font-size: 1.5rem;
   }
-  
-  
+
   .contact__list {
     grid-template-columns: repeat(3, 1fr);
     text-align: center;
@@ -132,9 +123,9 @@
 
       .project-1 {
         grid-area: 1 / 1 / 2 / 2;
-        background: url('../images/corozb.github.io_moviecity_\ responsive.png') no-repeat;
+        background: url('../images/headphone_responsive.png') no-repeat center
+          center;
         background-size: cover;
-
       }
 
       .project-2 {
@@ -142,47 +133,45 @@
         background: url('../images/creea-digitalAgency.png') 25% no-repeat;
         background-size: cover;
       }
-      
+
       .project-3 {
         grid-area: 1 / 2 / 2 / 3;
-        background: url('../images/corozb.github.io_dashboard_\ responsive.png') no-repeat;
+        background: url('../images/corozb.github.io_dashboard_\ responsive.png')
+          no-repeat;
         background-size: cover;
-        
       }
 
       .project-4 {
         grid-area: 2 / 1 / span 2 / span 2;
-        background: url('../images/travelers_responsive.png') no-repeat top center;
+        background: url('../images/travelers_responsive.png') no-repeat top
+          center;
         background-size: cover;
       }
-      
+
       .project-5 {
         grid-area: 3 / 3 / 4 / 4;
-        background: url('../images/corozb.github.io_budget-app_responsive.png') no-repeat 10% center;
+        background: url('../images/corozb.github.io_moviecity_\ responsive.png')
+          no-repeat;
         background-size: cover;
       }
 
       .project-6 {
         grid-area: 3 / 4 / 4 / 5;
-        background: url('../images/headphone_responsive.png') no-repeat center center;
+        background: url('../images/corozb.github.io_budget-app_responsive.png')
+          no-repeat 10% center;
         background-size: cover;
       }
-
     }
-
   }
   .contact {
     padding-top: 20vh;
 
-
     &__list {
-      width: 100vw
+      width: 100vw;
     }
-    
+
     hr {
       margin-top: 11vh;
     }
   }
-
 }
-  
