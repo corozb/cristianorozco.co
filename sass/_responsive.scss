@@ -1,177 +1,177 @@
 @include phone {
-  body {
-    min-width: 26rem;
-  }
+	body {
+		min-width: 26rem;
+	}
 
-  .menu-nav {
-    min-width: 30rem;
-  }
+	.menu-nav {
+		min-width: 30rem;
+	}
 
-  .about__desc {
-    padding: 4rem;
-  }
+	.about__desc {
+		padding: 4rem;
+	}
 }
 
 @include mobile {
-  .menu-btn {
-    visibility: hidden;
-  }
+	.menu-btn {
+		visibility: hidden;
+	}
 
-  .nav {
-    visibility: visible;
+	.nav {
+		visibility: visible;
 
-    .menu-nav {
-      display: block;
-      transform: translateY(0);
-      height: 100%;
-      background: transparent;
-      text-align: right;
+		.menu-nav {
+			display: block;
+			transform: translateY(0);
+			height: 100%;
+			background: transparent;
+			text-align: right;
 
-      &__item {
-        display: inline;
-        padding-right: 1.5rem;
-      }
+			&__item {
+				display: inline;
+				padding-right: 1.5rem;
+			}
 
-      &__link {
-        font-size: 1.5rem;
-      }
-    }
-  }
+			&__link {
+				font-size: 1.5rem;
+			}
+		}
+	}
 
-  .about__desc {
-    width: 80%;
-    padding-top: 30vh;
-    font-size: 1.5rem;
-  }
+	.about__desc {
+		width: 80%;
+		padding-top: 30vh;
+		font-size: 1.5rem;
+	}
 
-  .projects {
-    padding-top: 5vh;
-    &-image {
-      height: 20vh;
-    }
+	.projects {
+		padding-top: 5vh;
+		&-image {
+			height: 20vh;
+		}
 
-    .subtitles {
-      font-size: 3rem;
-    }
+		.subtitles {
+			font-size: 3rem;
+		}
 
-    &__btns {
-      &:hover a {
-        margin-bottom: 7rem;
-      }
-    }
+		&__btns {
+			&:hover a {
+				margin-bottom: 7rem;
+			}
+		}
 
-    .project-text {
-      margin-top: 6rem;
+		.project-text {
+			margin-top: 6rem;
 
-      h1 {
-        font-size: 2rem;
-        padding-bottom: 2rem;
-      }
+			h1 {
+				font-size: 2rem;
+				padding-bottom: 2rem;
+			}
 
-      h2 {
-        font-size: 1.6rem;
-      }
-    }
-  }
+			h2 {
+				font-size: 1.6rem;
+			}
+		}
+	}
 
-  .contact {
-    padding-top: 40vh;
+	.contact {
+		padding-top: 40vh;
 
-    &__list {
-      grid-template-columns: repeat(2, 1fr);
-      width: 80vw;
-      text-align: left;
-    }
+		&__list {
+			grid-template-columns: repeat(2, 1fr);
+			width: 80vw;
+			text-align: left;
+		}
 
-    p {
-      padding-top: 5rem;
-    }
-  }
+		p {
+			padding-top: 5rem;
+		}
+	}
 }
 
 @include tablet {
-  .projects {
-    &__container {
-      width: 80vw;
-      grid-template-columns: 1fr;
-    }
-  }
+	.projects {
+		&__container {
+			width: 80vw;
+			grid-template-columns: 1fr;
+		}
+	}
 
-  .about__desc {
-    width: 90%;
-    padding-top: 30vh;
-    font-size: 1.5rem;
-  }
+	.about__desc {
+		width: 90%;
+		padding-top: 30vh;
+		font-size: 1.5rem;
+	}
 
-  .contact__list {
-    grid-template-columns: repeat(3, 1fr);
-    text-align: center;
-  }
+	.contact__list {
+		grid-template-columns: repeat(3, 1fr);
+		text-align: center;
+	}
 }
 
 @include desktop {
-  .projects {
-    &__container {
-      display: grid;
-      grid-template-columns: repeat(4, auto);
-      grid-template-rows: 400px 100px 400px;
-      grid-gap: 1rem;
+	.projects {
+		&__container {
+			display: grid;
+			grid-template-columns: repeat(4, auto);
+			grid-template-rows: 400px 100px 400px;
+			grid-gap: 1rem;
 
-      img {
-        display: none;
-      }
+			img {
+				display: none;
+			}
 
-      .project-1 {
-        grid-area: 1 / 1 / 2 / 2;
-        background: url('../images/headphone_responsive.png') no-repeat center
-          center;
-        background-size: cover;
-      }
+			.project-1 {
+				grid-area: 1 / 1 / 2 / 2;
+				background: url('../images/headphone_responsive.png') no-repeat center
+					center;
+				background-size: cover;
+			}
 
-      .project-2 {
-        grid-area: 1 / 3 / span 2 / span 2;
-        background: url('../images/creea-digitalAgency.png') 25% no-repeat;
-        background-size: cover;
-      }
+			.project-2 {
+				grid-area: 1 / 3 / span 2 / span 2;
+				background: url('../images/creea-digitalAgency.png') 25% no-repeat;
+				background-size: cover;
+			}
 
-      .project-3 {
-        grid-area: 1 / 2 / 2 / 3;
-        background: url('../images/corozb.github.io_dashboard_\ responsive.png')
-          no-repeat;
-        background-size: cover;
-      }
+			.project-3 {
+				grid-area: 1 / 2 / 2 / 3;
+				background: url('../images/corozb.github.io_dashboard_\ responsive.png')
+					no-repeat;
+				background-size: cover;
+			}
 
-      .project-4 {
-        grid-area: 2 / 1 / span 2 / span 2;
-        background: url('../images/travelers_responsive.png') no-repeat top
-          center;
-        background-size: cover;
-      }
+			.project-4 {
+				grid-area: 2 / 1 / span 2 / span 2;
+				background: url('../images/travelers_responsive.png') no-repeat top
+					center;
+				background-size: cover;
+			}
 
-      .project-5 {
-        grid-area: 3 / 3 / 4 / 4;
-        background: url('../images/corozb.github.io_moviecity_\ responsive.png')
-          no-repeat;
-        background-size: cover;
-      }
+			.project-5 {
+				grid-area: 3 / 3 / 4 / 4;
+				background: url('../images/corozb.github.io_moviecity_\ responsive.png')
+					no-repeat;
+				background-size: cover;
+			}
 
-      .project-6 {
-        grid-area: 3 / 4 / 4 / 5;
-        background: url('../images/corozb.github.io_budget-app_responsive.png')
-          no-repeat 10% center;
-        background-size: cover;
-      }
-    }
-  }
-  .contact {
-    padding-top: 20vh;
+			.project-6 {
+				grid-area: 3 / 4 / 4 / 5;
+				background: url('../images/corozb.github.io_chat-app_responsive.png')
+					no-repeat 10% center;
+				background-size: cover;
+			}
+		}
+	}
+	.contact {
+		padding-top: 20vh;
 
-    &__list {
-      width: 100vw;
-    }
+		&__list {
+			width: 100vw;
+		}
 
-    hr {
-      margin-top: 11vh;
-    }
-  }
+		hr {
+			margin-top: 11vh;
+		}
+	}
 }

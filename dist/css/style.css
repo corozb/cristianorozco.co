@@ -837,7 +837,7 @@ footer {
     -ms-grid-column: 4;
     -ms-grid-column-span: 1;
     grid-area: 3 / 4 / 4 / 5;
-    background: url("../images/corozb.github.io_budget-app_responsive.png") no-repeat 10% center;
+    background: url("../images/corozb.github.io_chat-app_responsive.png") no-repeat 10% center;
     background-size: cover;
   }
   .contact {
