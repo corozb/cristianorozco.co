@@ -2,7 +2,13 @@ dist/css/style.css.map
 dist/css/style.min.css.map
 dist/images-originals
 *.scss
-sass/
+
+### Sass ###
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
 # Local Netlify folder
 .netlify
 
