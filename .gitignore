@@ -2,15 +2,16 @@ dist/css/style.css.map
 dist/css/style.min.css.map
 dist/images-originals
 *.scss
-<<<<<<< HEAD
-=======
 
 ### Sass ###
 .sass-cache/
 *.css.map
 *.sass.map
 *.scss.map
->>>>>>> gh-pages
+*.scss
+*.map
+*.min.css
+/dist/css/style.min.css
 
 # Local Netlify folder
 .netlify
