@@ -745,7 +745,7 @@ footer {
     padding-top: 40vh;
   }
   .contact__list {
-    -ms-grid-columns: (1fr)[2];
+    -ms-grid-columns: (1fr);
         grid-template-columns: repeat(2, 1fr);
     width: 80vw;
     text-align: left;
@@ -767,7 +767,7 @@ footer {
     font-size: 1.5rem;
   }
   .contact__list {
-    -ms-grid-columns: (1fr)[3];
+    -ms-grid-columns: (1fr);
         grid-template-columns: repeat(2, 1fr);
     text-align: center;
   }
@@ -777,7 +777,7 @@ footer {
   .projects__container {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (auto)[4];
+    -ms-grid-columns: (auto);
         grid-template-columns: repeat(4, auto);
     -ms-grid-rows: 400px 100px 400px;
         grid-template-rows: 400px 100px 400px;
